@@ -59,10 +59,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="API\CSV.cs" />
+    <Compile Include="Internal\CSVTransactions.cs" />
+    <Compile Include="JPI\API\Files\CSVLine.cs" />
+    <Compile Include="API\Transaction.cs" />
+    <Compile Include="API\Transactions.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="JPI\Internal\BasicCSVLines.cs" />
+    <Compile Include="JPI\API\Files\CSVLines.cs" />
+    <Compile Include="JPI\API\Auto Disposing\Auto.cs" />
+    <Compile Include="JPI\API\Files\CSV.cs" />
+    <Compile Include="JPI\API\Files\FilePath.cs" />
+    <Compile Include="JPI\API\Not Null\a.cs" />
+    <Compile Include="JPI\API\Not Null\NotNullExtensions.cs" />
+    <Compile Include="JPI\API\Text\StringExtensions.cs" />
+    <Compile Include="JPI\API\System Extensions\ClassExtensions.cs" />
+    <Compile Include="JPI\API\Text\Text.cs" />
+    <Compile Include="JPI\Internal\AutoDisposing{T}.cs" />
+    <Compile Include="JPI\Internal\Disposing.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -86,6 +103,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,13 @@
+﻿[*.cs]
+
+# IDE0065: Misplaced using directive
+csharp_using_directive_placement = inside_namespace
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+
+# IDE0008: Use explicit type
+csharp_style_var_elsewhere = true
