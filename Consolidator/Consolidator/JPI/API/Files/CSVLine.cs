@@ -4,7 +4,7 @@
    {
       private readonly string line;
 
-      internal CSVLine(Text line) => this.line = line.Primitive;
+      internal CSVLine(LineOfText line) => this.line = line.Primitive;
 
       // Temp
       internal Text Text() => (line.Split(',')[5] + " " + line.Split(',')[6]).ToText();

@@ -60,7 +60,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="API\CSV.cs" />
+    <Compile Include="Internal\BasicTransactions.cs" />
+    <Compile Include="Internal\ManyTransactions.cs" />
     <Compile Include="Internal\CSVTransactions.cs" />
+    <Compile Include="JPI\API\Files\Files.cs" />
     <Compile Include="JPI\API\Files\CSVLine.cs" />
     <Compile Include="API\Transaction.cs" />
     <Compile Include="API\Transactions.cs" />
@@ -68,6 +71,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="JPI\API\Files\FolderPath.cs" />
+    <Compile Include="JPI\API\System Extensions\LinqExtensions.cs" />
+    <Compile Include="JPI\API\Text\LineOfText.cs" />
+    <Compile Include="JPI\API\Text\Text.cs" />
     <Compile Include="JPI\Internal\BasicCSVLines.cs" />
     <Compile Include="JPI\API\Files\CSVLines.cs" />
     <Compile Include="JPI\API\Auto Disposing\Auto.cs" />
@@ -77,9 +84,14 @@
     <Compile Include="JPI\API\Not Null\NotNullExtensions.cs" />
     <Compile Include="JPI\API\Text\StringExtensions.cs" />
     <Compile Include="JPI\API\System Extensions\ClassExtensions.cs" />
-    <Compile Include="JPI\API\Text\Text.cs" />
+    <Compile Include="JPI\API\Text\Characters.cs" />
+    <Compile Include="JPI\Internal\BasicEmptyText.cs" />
+    <Compile Include="JPI\Internal\BasicWhiteSpace.cs" />
+    <Compile Include="JPI\Internal\BasicCharacters.cs" />
     <Compile Include="JPI\Internal\AutoDisposing{T}.cs" />
     <Compile Include="JPI\Internal\Disposing.cs" />
+    <Compile Include="JPI\API\Text\EmptyText.cs" />
+    <Compile Include="JPI\API\Text\WhiteSpace.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

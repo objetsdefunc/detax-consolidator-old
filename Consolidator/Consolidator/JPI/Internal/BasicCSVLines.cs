@@ -18,7 +18,8 @@
             {
                while (!reader.EndOfStream)
                {
-                  lines.Add(new CSVLine(reader.ReadLine().ToText()));
+                  // TODO: What if this throws?
+                  lines.Add(new CSVLine(reader.ReadLine().ToCharactersOrEmpty()));
                }
             });
 

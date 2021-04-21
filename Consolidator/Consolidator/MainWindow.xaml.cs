@@ -1,6 +1,9 @@
 ﻿namespace Consolidator
 {
    using System.Diagnostics;
+   using System.IO;
+   using System.Linq;
+   using System.Reflection;
    using System.Windows;
    using JPI;
 
@@ -13,13 +16,20 @@
       {
          InitializeComponent();
 
-         // Next:
-         // - CSV.TransactionsFrom(Files.In(folder))...
-         // - Count unique transactions.
-         var transactions = CSV.TransactionsFrom(
-            FilePath.ThatExists("../../../../../CSV/fills.csv".ToText()));
+         var folder = Path.Combine(
+            Path.GetDirectoryName(Assembly.GetEntryAssembly().Location),
+            "../../CSV/")
+               .ToCharacters()
+               .UnlessNull();
 
-         Debug.WriteLine($"Found {transactions.Count} transactions");
+         // Next:
+         // - Count unique transactions.
+         var transactions =
+            CSV.TransactionsFrom(
+               Files.In(
+                  FolderPath.ThatExists(folder)));
+
+         Debug.WriteLine($"Found {transactions.Count()} transactions");
       }
    }
 }

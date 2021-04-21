@@ -4,9 +4,9 @@
 
    public sealed class FilePath
    {
-      private readonly Text path;
+      private readonly Characters path;
 
-      internal FilePath(Text path) =>
+      internal FilePath(Characters path) =>
          this.path = new FileInfo(path.Primitive).Length == 0
             ? throw new InvalidDataException("The file is empty.")
             : path;
@@ -15,6 +15,6 @@
          Auto.Disposing(
             () => new StreamReader(File.OpenRead(path.Primitive)));
 
-      public static FilePath ThatExists(a<Text> path) => new FilePath(path.NotNull);
+      public static FilePath ThatExists(a<Characters> path) => new FilePath(path.NotNull);
    }
 }
