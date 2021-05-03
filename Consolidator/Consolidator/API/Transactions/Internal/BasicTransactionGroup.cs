@@ -4,11 +4,11 @@
    using System.Collections.Generic;
    using System.Linq;
 
-   internal abstract class BasicTransactions : Transactions
+   internal abstract class BasicTransactionGroup : Transactions, IReadOnlyCollection<Transaction>
    {
       private readonly List<Transaction> transactions;
 
-      internal BasicTransactions(IEnumerable<Transaction> transactions) =>
+      internal BasicTransactionGroup(IEnumerable<Transaction> transactions) =>
          this.transactions = transactions.ToList();
 
       public int Count => transactions.Count;

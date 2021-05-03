@@ -59,45 +59,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="API\CSV.cs" />
-    <Compile Include="Internal\BasicTransactions.cs" />
-    <Compile Include="Internal\ManyTransactions.cs" />
-    <Compile Include="Internal\CSVTransactions.cs" />
-    <Compile Include="JPI\API\Files\Files.cs" />
-    <Compile Include="JPI\API\Files\CSVLine.cs" />
-    <Compile Include="API\Transaction.cs" />
-    <Compile Include="API\Transactions.cs" />
+    <Compile Include="JPI\Files\CSVFile.cs" />
+    <Compile Include="JPI\Files\CSVFiles.cs" />
+    <Compile Include="API\Transactions\Internal\BasicTransactionGroup.cs" />
+    <Compile Include="JPI\Files\CSVLine.cs" />
+    <Compile Include="API\Transactions\Transaction.cs" />
+    <Compile Include="API\Transactions\Transactions.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="JPI\API\Files\FolderPath.cs" />
-    <Compile Include="JPI\API\System Extensions\LinqExtensions.cs" />
-    <Compile Include="JPI\API\Text\LineOfText.cs" />
-    <Compile Include="JPI\API\Text\Text.cs" />
-    <Compile Include="JPI\Internal\BasicCSVLines.cs" />
-    <Compile Include="JPI\API\Files\CSVLines.cs" />
-    <Compile Include="JPI\API\Auto Disposing\Auto.cs" />
-    <Compile Include="JPI\API\Files\CSV.cs" />
-    <Compile Include="JPI\API\Files\FilePath.cs" />
-    <Compile Include="JPI\API\Not Null\a.cs" />
-    <Compile Include="JPI\API\Not Null\NotNullExtensions.cs" />
-    <Compile Include="JPI\API\Text\StringExtensions.cs" />
-    <Compile Include="JPI\API\System Extensions\ClassExtensions.cs" />
-    <Compile Include="JPI\API\Text\Characters.cs" />
-    <Compile Include="JPI\Internal\BasicEmptyText.cs" />
-    <Compile Include="JPI\Internal\BasicWhiteSpace.cs" />
-    <Compile Include="JPI\Internal\BasicCharacters.cs" />
-    <Compile Include="JPI\Internal\AutoDisposing{T}.cs" />
-    <Compile Include="JPI\Internal\Disposing.cs" />
-    <Compile Include="JPI\API\Text\EmptyText.cs" />
-    <Compile Include="JPI\API\Text\WhiteSpace.cs" />
+    <Compile Include="JPI\Files\FolderPath.cs" />
+    <Compile Include="JPI\System Extensions\LinqExtensions.cs" />
+    <Compile Include="JPI\Text\LineOfText.cs" />
+    <Compile Include="JPI\Text\Text.cs" />
+    <Compile Include="JPI\Files\Internal\BasicCSVLines.cs" />
+    <Compile Include="JPI\Files\CSVLines.cs" />
+    <Compile Include="JPI\Auto Disposing\Auto.cs" />
+    <Compile Include="JPI\Files\FilePath.cs" />
+    <Compile Include="JPI\Not Null\a.cs" />
+    <Compile Include="JPI\Not Null\NotNullExtensions.cs" />
+    <Compile Include="JPI\Text\StringExtensions.cs" />
+    <Compile Include="JPI\System Extensions\ObjectExtensions.cs" />
+    <Compile Include="JPI\Text\Characters.cs" />
+    <Compile Include="JPI\Text\Internal\BasicEmptyText.cs" />
+    <Compile Include="JPI\Text\Internal\BasicWhiteSpace.cs" />
+    <Compile Include="JPI\Text\Internal\BasicCharacters.cs" />
+    <Compile Include="JPI\Auto Disposing\Internal\AutoDisposing{T}.cs" />
+    <Compile Include="JPI\Auto Disposing\Disposing.cs" />
+    <Compile Include="JPI\Text\EmptyText.cs" />
+    <Compile Include="JPI\Text\WhiteSpace.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Transactions\Internal\TransactionGroups.cs" />
+    <Compile Include="API\Transactions\Internal\TransactionGroup.cs" />
+    <Compile Include="API\Portfolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
