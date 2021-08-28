@@ -2,7 +2,7 @@
 {
    using System.Collections.Generic;
 
-   public interface CSVLines : IReadOnlyCollection<CSVLine>
+   public interface CSVLines : IReadOnlyCollection<CSVRecord>
    {
    }
 }

@@ -4,14 +4,15 @@
    using System.Collections.Generic;
    using System.Linq;
    using JPI;
+   using JPI.Linq;
 
-   internal sealed class BasicCSVLines : CSVLines, IReadOnlyCollection<CSVLine>
+   internal sealed class BasicCSVLines : IReadOnlyCollection<CSVNamedRecord>
    {
-      private readonly List<CSVLine> lines;
+      private readonly List<CSVNamedRecord> records;
 
       internal BasicCSVLines(FilePath path)
       {
-         lines = new List<CSVLine>();
+         var lines = new List<SingleTextLine>();
 
          path.OpenedForReading().UseAndDispose(
             reader =>
@@ -19,17 +20,19 @@
                while (!reader.EndOfStream)
                {
                   // TODO: What if this throws?
-                  lines.Add(new CSVLine(reader.ReadLine().ToCharactersOrEmpty()));
+                  lines.Add(reader.ReadLine().ToTextLine());
                }
             });
 
-         lines = lines.Skip(1).ToList();
+         var header = lines[0];
+
+         records = lines.Skip(1).Map(line => new CSVNamedRecord(new CSVHeader(header), new CSVRecord(line))).ToList();
       }
 
-      public int Count => lines.Count;
+      public int Count => records.Count;
 
-      public IEnumerator<CSVLine> GetEnumerator() => lines.GetEnumerator();
+      public IEnumerator<CSVNamedRecord> GetEnumerator() => records.GetEnumerator();
 
-      IEnumerator IEnumerable.GetEnumerator() => lines.GetEnumerator();
+      IEnumerator IEnumerable.GetEnumerator() => records.GetEnumerator();
    }
 }

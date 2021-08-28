@@ -1,11 +1,9 @@
 ﻿namespace Consolidator
 {
-   using JPI;
-
    public sealed class Transaction
    {
-      private readonly CSVLine line;
+      private readonly TransactionRecord line;
 
-      internal Transaction(CSVLine line) => this.line = line;
+      internal Transaction(TransactionRecord line) => this.line = line;
    }
 }

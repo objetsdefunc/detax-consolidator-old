@@ -1,8 +1,8 @@
 ﻿namespace JPI
 {
-   internal sealed class BasicWhiteSpace : WhiteSpace, Text
+   internal sealed class BasicBlankSpaceOld : BlankSpace, AnyText
    {
-      internal BasicWhiteSpace(string text) =>
+      internal BasicBlankSpaceOld(string text) =>
          Primitive = string.IsNullOrWhiteSpace(text.UnlessNull())
             ? text
             : throw new System.ArgumentException(

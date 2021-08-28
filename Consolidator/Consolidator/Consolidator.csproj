@@ -59,20 +59,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="API\Transaction Records\TransactionRecordsFile.cs" />
+    <Compile Include="API\Transactions\Transaction.cs" />
+    <Compile Include="API\Transaction Records\Internal\BasicTransactionFile.cs" />
     <Compile Include="JPI\Files\CSVFile.cs" />
     <Compile Include="JPI\Files\CSVFiles.cs" />
-    <Compile Include="API\Transactions\Internal\BasicTransactionGroup.cs" />
-    <Compile Include="JPI\Files\CSVLine.cs" />
-    <Compile Include="API\Transactions\Transaction.cs" />
-    <Compile Include="API\Transactions\Transactions.cs" />
+    <Compile Include="API\Transaction Records\Internal\TransactionRecords.cs" />
+    <Compile Include="JPI\Files\CSVHeader.cs" />
+    <Compile Include="JPI\Files\CSVRecord.cs" />
+    <Compile Include="API\Transaction Records\TransactionRecord.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="JPI\Files\FolderPath.cs" />
+    <Compile Include="JPI\Files\Internal\CSVDatedRecord.cs" />
+    <Compile Include="JPI\Files\Internal\CSVNamedField.cs" />
+    <Compile Include="JPI\Files\Internal\CSVNamedRecord.cs" />
     <Compile Include="JPI\System Extensions\LinqExtensions.cs" />
-    <Compile Include="JPI\Text\LineOfText.cs" />
-    <Compile Include="JPI\Text\Text.cs" />
+    <Compile Include="JPI\Text\Internal\BasicSingleLine.cs" />
+    <Compile Include="JPI\Text\SingleTextLine.cs" />
+    <Compile Include="JPI\Text\AnyText.cs" />
     <Compile Include="JPI\Files\Internal\BasicCSVLines.cs" />
     <Compile Include="JPI\Files\CSVLines.cs" />
     <Compile Include="JPI\Auto Disposing\Auto.cs" />
@@ -82,21 +89,19 @@
     <Compile Include="JPI\Text\StringExtensions.cs" />
     <Compile Include="JPI\System Extensions\ObjectExtensions.cs" />
     <Compile Include="JPI\Text\Characters.cs" />
-    <Compile Include="JPI\Text\Internal\BasicEmptyText.cs" />
-    <Compile Include="JPI\Text\Internal\BasicWhiteSpace.cs" />
+    <Compile Include="JPI\Text\Internal\BasicEmptyLine.cs" />
+    <Compile Include="JPI\Text\Internal\BasicBlankSpaceOld.cs" />
     <Compile Include="JPI\Text\Internal\BasicCharacters.cs" />
     <Compile Include="JPI\Auto Disposing\Internal\AutoDisposing{T}.cs" />
     <Compile Include="JPI\Auto Disposing\Disposing.cs" />
-    <Compile Include="JPI\Text\EmptyText.cs" />
-    <Compile Include="JPI\Text\WhiteSpace.cs" />
+    <Compile Include="JPI\Text\EmptyLine.cs" />
+    <Compile Include="JPI\Text\BlankSpace.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\Transactions\Internal\TransactionGroups.cs" />
-    <Compile Include="API\Transactions\Internal\TransactionGroup.cs" />
     <Compile Include="API\Portfolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -125,6 +130,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LanguageExt.Core">
+      <Version>3.4.15</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

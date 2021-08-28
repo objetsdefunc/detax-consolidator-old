@@ -1,6 +1,6 @@
 ﻿namespace JPI
 {
-   public interface Text
+   public interface AnyText
    {
       string Primitive { get; }
    }

@@ -1,6 +1,7 @@
 ﻿namespace JPI
 {
-   public interface Characters : LineOfText, Text
+   public interface Characters : AnyText
    {
+      bool Matches(Characters name);
    }
 }
